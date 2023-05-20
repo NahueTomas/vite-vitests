@@ -1,3 +1,5 @@
+import './Home.css'
+
 export function Home() {
-  return <main>Accounts</main>
+  return <main className="Home">Accounts</main>
 }
