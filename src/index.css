@@ -5,7 +5,7 @@
 
   --primary-color: #f0efef;
   --secondary-color: #32cd32;
-  --tertiary-color: #013050;
+  --tertiary-color: #002b4b;
   --quaternary-color: #ffffff;
 }
 
@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--tertiary-color);
 }
 
 body #root {
