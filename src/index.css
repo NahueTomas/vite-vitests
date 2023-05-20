@@ -8,3 +8,23 @@
   --tertiary-color: #013050;
   --quaternary-color: #ffffff;
 }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body #root {
+  width: 100%;
+  max-width: 1024px;
+  max-height: 768px;
+  margin: auto;
+}
