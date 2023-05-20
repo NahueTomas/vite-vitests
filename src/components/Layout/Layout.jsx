@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 
+// Components
 import { Header } from '../Header'
 import { Footer } from '../Footer'
 
