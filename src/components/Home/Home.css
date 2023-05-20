@@ -1,3 +1,7 @@
 .Home {
   flex-grow: 1;
 }
+
+.Home__info {
+  margin-top: 20px;
+}
