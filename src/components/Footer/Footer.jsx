@@ -1,7 +1,14 @@
+import './Footer.css'
+
 export function Footer() {
   return (
-    <footer>
-      <button>Salir</button>
+    <footer className="Footer">
+      <button
+        className="Footer__btn"
+        onClick={() => alert('This button doesnt do anything')}
+      >
+        Salir
+      </button>
     </footer>
   )
 }
