@@ -1,0 +1,7 @@
+.Description {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--tertiary-color);
+  text-align: center;
+  margin: 0;
+}
