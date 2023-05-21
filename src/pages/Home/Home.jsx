@@ -5,9 +5,13 @@ import { useEffect, useState } from 'react'
 import { getAccounts } from '../../services/api.service'
 
 // Components
-import { Title } from '../Title'
-import { Description } from '../Description'
-import { GridCard, GridCardSkeleton, GridCardError } from '../GridCard'
+import { Title } from '../../components/Title'
+import { Description } from '../../components/Description'
+import {
+  GridCard,
+  GridCardSkeleton,
+  GridCardError,
+} from '../../components/GridCard'
 
 export function Home() {
   const [response, setResponse] = useState({
