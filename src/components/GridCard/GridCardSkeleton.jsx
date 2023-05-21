@@ -1,3 +1,9 @@
+import './GridCardSkeleton.css'
+
 export function GridCardSkeleton() {
-  return <div>LOADING...</div>
+  return (
+    <div className="GridCardSkeleton">
+      <p>Cargando...</p>
+    </div>
+  )
 }

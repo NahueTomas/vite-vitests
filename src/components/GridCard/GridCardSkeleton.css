@@ -1,0 +1,13 @@
+.GridCardSkeleton {
+  animation: pulse 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.GridCardSkeleton p {
+  font-size: 30px;
+  text-align: center;
+  color: var(--tertiary-color);
+}

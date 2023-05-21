@@ -1,0 +1,13 @@
+.GridCardError {
+  display: flex;
+  background-color: var(--alert-primary-color);
+  color: var(--alert-secondary-color);
+  animation: fade-in 1s;
+  border-radius: 5px;
+  height: 100%;
+  margin: auto;
+}
+
+.GridCardError h3 {
+  text-align: center;
+}
