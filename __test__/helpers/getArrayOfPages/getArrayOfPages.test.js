@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { getArrayOfPages } from '../../src/helpers'
+import { getArrayOfPages } from '../../../src/helpers'
 import { testItems, expectedOutput } from './testItems'
 
 describe('getArrayPage sorting items', () => {
