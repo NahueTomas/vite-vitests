@@ -13,6 +13,7 @@ export function Layout() {
   return (
     <>
       <Header />
+
       {selected === null ? (
         <Home />
       ) : (
@@ -23,6 +24,7 @@ export function Layout() {
           moneda={selected.moneda}
         />
       )}
+
       <Footer />
     </>
   )
