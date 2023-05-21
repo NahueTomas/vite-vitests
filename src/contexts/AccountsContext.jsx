@@ -11,7 +11,7 @@ export const AccountsContext = createContext({
 
 export function AccountsContextProvider({ children }) {
   const [response, setResponse] = useState({
-    loading: false,
+    loading: true,
     error: false,
     accounts: [],
   })
