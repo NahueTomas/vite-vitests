@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import './styles/index.css'
 
 // Components
 import { Layout } from './components/Layout'
