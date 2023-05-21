@@ -21,4 +21,9 @@ describe('Get currency by name', () => {
     const currency = getCurrencyByName('Bolivares')
     expect(currency).toBe('bs')
   })
+
+  it('Should return "Divisa no definida"', () => {
+    const currency = getCurrencyByName('TESTING')
+    expect(currency).toBe('Divisa no definida')
+  })
 })

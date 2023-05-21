@@ -21,4 +21,9 @@ describe('Get currency by symbol', () => {
     const currency = getCurrencyBySymbol('bs')
     expect(currency).toBe('Bolivares')
   })
+
+  it('Should return "Divisa no definida"', () => {
+    const currency = getCurrencyBySymbol('TESTING')
+    expect(currency).toBe('Divisa no definida')
+  })
 })
