@@ -9,7 +9,7 @@ import {
 } from './testItems'
 
 describe('getArrayPage sorting items', () => {
-  it('Should return 3 pages', () => {
+  it('Should return 3 pages (5 items, 4 items, 4 items)', () => {
     const result = getArrayOfPages(testItems1)
 
     expect(expectedOutput1).to.deep.equal(result)
