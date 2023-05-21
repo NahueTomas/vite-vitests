@@ -21,4 +21,9 @@ describe('Test getAccountTypeByName', () => {
     const currency = getAccountTypeByName('I dont know 2')
     expect(currency).toBe('Cc')
   })
+
+  it('Should return "No existe ese tipo de cuenta"', () => {
+    const currency = getAccountTypeByName('TESTING')
+    expect(currency).toBe('No existe ese tipo de cuenta')
+  })
 })

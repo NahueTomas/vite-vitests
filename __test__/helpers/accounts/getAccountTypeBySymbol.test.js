@@ -21,4 +21,9 @@ describe('Get account type by symbol', () => {
     const currency = getAccountTypeBySymbol('Cc')
     expect(currency).toBe('I dont know 2')
   })
+
+  it('Should return "No existe ese tipo de cuenta"', () => {
+    const currency = getAccountTypeBySymbol('TESTING')
+    expect(currency).toBe('No existe ese tipo de cuenta')
+  })
 })
