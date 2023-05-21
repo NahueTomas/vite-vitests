@@ -1,8 +1,5 @@
 import './Home.css'
-import { useEffect, useState } from 'react'
-
-// API
-import { getAccounts } from '../../services/api.service'
+import { useContext } from 'react'
 
 // Components
 import { Title } from '../../components/Title'
@@ -13,48 +10,11 @@ import {
   GridCardError,
 } from '../../components/GridCard'
 
+// Contexts
+import { AccountsContext } from '../../contexts'
+
 export function Home() {
-  const [response, setResponse] = useState({
-    loading: true,
-    error: false,
-    accounts: [],
-  })
-
-  async function getData(controller) {
-    try {
-      const accounts = await getAccounts(controller.signal)
-      setResponse({
-        loading: false,
-        error: false,
-        accounts,
-      })
-    } catch (err) {
-      console.log(err)
-      setResponse({
-        loading: false,
-        error: true,
-        accounts: [],
-      })
-    }
-  }
-
-  useEffect(() => {
-    const controller = new AbortController()
-    getData(controller)
-
-    // Unmount the component
-    return () => {
-      // Abort the fetching
-      controller.abort()
-
-      // Reset data
-      setResponse({
-        loading: false,
-        error: false,
-        accounts: [],
-      })
-    }
-  }, [])
+  const { error, loading, accounts } = useContext(AccountsContext)
 
   return (
     <main className="Home">
@@ -63,11 +23,9 @@ export function Home() {
         <Title>Selecciona la cuenta a consultar</Title>
       </section>
       <section className="Home__grid">
-        {response.error && <GridCardError />}
-        {response.loading && <GridCardSkeleton />}
-        {response.accounts.length && !response.loading && (
-          <GridCard accounts={response.accounts} />
-        )}
+        {error && <GridCardError />}
+        {loading && <GridCardSkeleton />}
+        {accounts.length && !loading && <GridCard accounts={accounts} />}
       </section>
     </main>
   )

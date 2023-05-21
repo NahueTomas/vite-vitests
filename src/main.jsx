@@ -1,15 +1,20 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
 // Components
-import { Home } from './components/Home'
+import { Home } from './pages/Home'
 import { Layout } from './components/Layout'
 
+// Contexts
+import { AccountsContextProvider } from './contexts'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Layout>
+  // <React.StrictMode>
+  <Layout>
+    <AccountsContextProvider>
       <Home />
-    </Layout>
-  </React.StrictMode>
+    </AccountsContextProvider>
+  </Layout>
+  // </React.StrictMode>
 )
