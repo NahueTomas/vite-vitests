@@ -1,29 +1,19 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './GridCard.css'
 
 // Components
 import { Card } from '../Card'
 
 // Helpers
-import {
-  filterByAccountType,
-  filterByCurrency,
-  getAccountTypeByName,
-  getAccountTypeBySymbol,
-  getArrayOfPages,
-  getCurrencyByName,
-} from '../../helpers'
+import { getAccountTypeBySymbol } from '../../helpers'
 
-export function GridCard({ accounts }) {
-  const [pages, setPages] = useState([])
+// Hooks
+import { useAccounts } from '../../hooks'
+
+export function GridCard() {
+  const { pages } = useAccounts()
   const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    setPages(getPages(accounts))
-  }, [accounts])
-
-  if (!pages[index]) return null
 
   return (
     <div className="GridCard">
@@ -45,26 +35,6 @@ export function GridCard({ accounts }) {
       )}
     </div>
   )
-}
-
-function getPages(accounts) {
-  // Filter items by currency "dolares" & "pesos"
-  const dolarAndPesoItems = filterByCurrency(
-    [getCurrencyByName('Pesos'), getCurrencyByName('Dólares')],
-    accounts
-  )
-
-  // Filter items by account type "CA" && "CC" (doesnt include "Cc" accounts)
-  const ccAndcaAccounts = filterByAccountType(
-    [
-      getAccountTypeByName('Cuenta Corriente'),
-      getAccountTypeByName('Caja de Ahorro'),
-    ],
-    dolarAndPesoItems
-  )
-
-  // Get items sorted by pages
-  return getArrayOfPages(ccAndcaAccounts)
 }
 
 GridCard.propTypes = {
