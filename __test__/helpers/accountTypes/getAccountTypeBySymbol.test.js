@@ -14,6 +14,11 @@ describe('Get account type by symbol', () => {
 
   it('Should return "CCP" name', () => {
     const currency = getAccountTypeBySymbol('CCP')
-    expect(currency).toBe('No idea')
+    expect(currency).toBe('I dont know 1')
+  })
+
+  it('Should return "Cc" name', () => {
+    const currency = getAccountTypeBySymbol('Cc')
+    expect(currency).toBe('I dont know 2')
   })
 })

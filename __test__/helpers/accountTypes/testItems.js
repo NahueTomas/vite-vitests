@@ -1,5 +1,6 @@
 export const accountTypes = {
   ['Cuenta Corriente']: 'CC',
   ['Caja de Ahorro']: 'CA',
-  ['No idea']: 'CCP',
+  ['I dont know 1']: 'CCP',
+  ['I dont know 2']: 'Cc',
 }
