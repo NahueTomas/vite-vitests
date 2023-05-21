@@ -3,6 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
   --primary-color: #f0efef;
   --secondary-color: #32cd32;
   --tertiary-color: #002b4b;

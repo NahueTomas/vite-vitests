@@ -10,4 +10,5 @@
   color: var(--quaternary-color);
   border: none;
   border-radius: 5px;
+  box-shadow: var(--box-shadow);
 }
