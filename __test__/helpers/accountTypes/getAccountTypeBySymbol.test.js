@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getAccountTypeBySymbol } from '../../../src/helpers/accountTypes'
+import { getAccountTypeBySymbol } from '../../../src/helpers/accounts'
 
 describe('Get account type by symbol', () => {
   it('Should return "CA" name', () => {

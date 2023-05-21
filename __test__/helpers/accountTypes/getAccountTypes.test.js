@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { accountTypes } from './testItems'
-import { getAccountTypes } from '../../../src/helpers/accountTypes'
+import { getAccountTypes } from '../../../src/helpers/accounts'
 
 describe('Get account types', () => {
   it('Should return all the account types correcly', () => {
