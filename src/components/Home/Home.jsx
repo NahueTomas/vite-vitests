@@ -58,7 +58,7 @@ export function Home() {
         <Description>Consulta de Saldo</Description>
         <Title>Selecciona la cuenta a consultar</Title>
       </section>
-      <section>
+      <section className="Home__grid">
         {response.error && <GridCardError />}
         {response.loading && <GridCardSkeleton />}
         {response.accounts.length && !response.loading && (
