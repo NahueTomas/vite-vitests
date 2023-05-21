@@ -24,7 +24,10 @@ export function Home() {
       <section className="Home__grid">
         {error && <GridCardError />}
         {loading && <GridCardSkeleton />}
-        {accounts.length && !loading && <GridCard accounts={accounts} />}
+
+        {accounts.length && !loading && !error ? (
+          <GridCard accounts={accounts} />
+        ) : null}
       </section>
     </main>
   )
