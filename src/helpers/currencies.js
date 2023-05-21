@@ -7,9 +7,21 @@ export function getCurrencies() {
   }
 }
 
-export function getCurrency(string) {
+export function getCurrencyBySymbol(symbol) {
+  const currencies = getCurrencies()
+  const currencyNames = Object.keys(currencies)
+
+  const findCurrency = currencyNames.find(
+    (currencyName) => currencies[currencyName] === symbol
+  )
+
+  if (findCurrency) return findCurrency
+  else return 'Divisa no definida'
+}
+
+export function getCurrencyByName(name) {
   const currencies = getCurrencies()
 
-  if (currencies[string]) return currencies[string]
+  if (currencies[name]) return currencies[name]
   else return 'Divisa no definida'
 }
