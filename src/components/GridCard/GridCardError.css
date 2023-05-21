@@ -6,8 +6,13 @@
   border-radius: 5px;
   height: 100%;
   margin: auto;
+  align-items: center;
+  max-height: 300px;
 }
 
 .GridCardError h3 {
+  font-size: 24px;
   text-align: center;
+  margin: auto;
+  width: 100%;
 }

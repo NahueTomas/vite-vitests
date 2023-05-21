@@ -36,7 +36,7 @@ export function AccountsContextProvider({ children }) {
 
       setResponse({
         loading: false,
-        error: false,
+        error: true,
         accounts: filteredAccounts,
         pages,
       })
