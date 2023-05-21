@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,6 +15,9 @@
   --secondary-color: #32cd32;
   --tertiary-color: #002b4b;
   --quaternary-color: #ffffff;
+
+  --alert-primary-color: #ff9c9c;
+  --alert-secondary-color: #c93f3f;
 }
 
 html,
