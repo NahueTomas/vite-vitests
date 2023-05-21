@@ -1,0 +1,11 @@
+.Card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 140px;
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  font-size: 18px;
+  border-radius: 5px;
+}
