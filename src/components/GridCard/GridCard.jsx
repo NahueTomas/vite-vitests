@@ -9,10 +9,12 @@ import { Card } from '../Card'
 import { getAccountTypeBySymbol } from '../../helpers'
 
 // Hooks
-import { useAccounts } from '../../hooks'
+import { useAccounts, useSelected } from '../../hooks'
 
 export function GridCard() {
   const { pages } = useAccounts()
+  const { setSelected } = useSelected()
+
   const [index, setIndex] = useState(0)
 
   return (
@@ -23,7 +25,10 @@ export function GridCard() {
         </Card>
       )}
       {pages[index].map((account, index) => (
-        <Card key={`${index}-${account.n}`}>
+        <Card
+          key={`${index}-${account.n}`}
+          onClick={() => setSelected(account)}
+        >
           <span>{getAccountTypeBySymbol(account.tipo_letras)}</span>
           <span>Nro: {account.n}</span>
         </Card>
