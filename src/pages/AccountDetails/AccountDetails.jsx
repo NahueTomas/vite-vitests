@@ -12,7 +12,7 @@ export function AccountDetails({ saldo, tipo_letras, n, moneda }) {
   return (
     <main className="AccountDetails">
       <section className="AccountDetails__info">
-        <Description>Consulta de saldo</Description>
+        <Description>Consulta de Saldo</Description>
         <Title>Este es tu saldo actual</Title>
       </section>
 
