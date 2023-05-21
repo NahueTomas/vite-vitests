@@ -28,7 +28,7 @@ export function AccountsContextProvider({ children }) {
       const accounts = await getAccounts(controller.signal)
 
       // Filter by account types "CA" & "CC" (there is not include the "Cc" account type)
-      // Filter by currency "Dolares" y "Pesos" (there is not include the "$uy" -Pesos Uruguayos- currency)
+      // Filter by currency "Dolares" & "Pesos" (there is not include the "$uy" -Pesos Uruguayos- currency)
       const filteredAccounts = filterByRequisites(accounts)
 
       // Get pages sorted in arrays
