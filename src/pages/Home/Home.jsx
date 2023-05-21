@@ -1,5 +1,4 @@
 import './Home.css'
-import { useContext } from 'react'
 
 // Components
 import { Title } from '../../components/Title'
@@ -10,11 +9,11 @@ import {
   GridCardError,
 } from '../../components/GridCard'
 
-// Contexts
-import { AccountsContext } from '../../contexts'
+// Hooks
+import { useAccounts } from '../../hooks'
 
 export function Home() {
-  const { error, loading, accounts } = useContext(AccountsContext)
+  const { error, loading, accounts } = useAccounts()
 
   return (
     <main className="Home">
