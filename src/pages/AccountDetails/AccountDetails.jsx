@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import './AccountDetails.css'
 
 // Components
 import { Title } from '../../components/Title'
@@ -9,7 +10,7 @@ import { getAccountTypeBySymbol, getCurrencyBySymbol } from '../../helpers'
 
 export function AccountDetails({ saldo, tipo_letras, n, moneda }) {
   return (
-    <main>
+    <main className="AccountDetails">
       <section className="AccountDetails__info">
         <Description>Consulta de saldo</Description>
         <Title>Este es tu saldo actual</Title>
