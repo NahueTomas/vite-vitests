@@ -3,4 +3,5 @@
   font-size: 35px;
   color: var(--tertiary-color);
   margin: 0;
+  animation: fade-in 0.5s;
 }

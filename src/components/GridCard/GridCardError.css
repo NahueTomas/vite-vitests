@@ -2,7 +2,7 @@
   display: flex;
   background-color: var(--alert-primary-color);
   color: var(--alert-secondary-color);
-  animation: fade-in 1s;
+  animation: fade-in 0.5s;
   border-radius: 5px;
   height: 100%;
   margin: auto;

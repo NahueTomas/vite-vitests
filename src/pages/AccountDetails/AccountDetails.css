@@ -12,6 +12,7 @@
   padding: 25px;
   width: 100%;
   max-width: 400px;
+  animation: fade-in 0.5s;
 }
 
 .AccountDetails__data p {

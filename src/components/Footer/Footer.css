@@ -12,4 +12,5 @@
   border: none;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
+  animation: fade-in 0.5s;
 }
