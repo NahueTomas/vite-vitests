@@ -14,6 +14,8 @@ export function getArrayOfPages(items) {
     lengthItems = copyItems.length
   }
 
+  if (lengthItems === 0) return pages
+
   // Middle pages
   const segments = Math.max(lengthItems / 4) - 1
 
@@ -31,7 +33,7 @@ export function getArrayOfPages(items) {
     copyItems = []
     lengthItems = 0
   } else {
-    const lastPage = copyItems.splice(0, 5)
+    const lastPage = copyItems.slice(0, 5)
     pages.push(lastPage)
     copyItems = []
     lengthItems = 0

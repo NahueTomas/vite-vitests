@@ -1,12 +1,23 @@
 import { describe, expect, it } from 'vitest'
 
 import { getArrayOfPages } from '../../../src/helpers'
-import { testItems, expectedOutput } from './testItems'
+import {
+  testItems1,
+  expectedOutput1,
+  testItems2,
+  expectedOutput2,
+} from './testItems'
 
 describe('getArrayPage sorting items', () => {
-  it('Should sort all the items correctly', () => {
-    const result = getArrayOfPages(testItems)
+  it('Should return 3 pages', () => {
+    const result = getArrayOfPages(testItems1)
 
-    expect(expectedOutput).to.deep.equal(result)
+    expect(expectedOutput1).to.deep.equal(result)
+  })
+
+  it('Should return one page with 6 items', () => {
+    const result = getArrayOfPages(testItems2)
+
+    expect(expectedOutput2).to.deep.equal(result)
   })
 })
