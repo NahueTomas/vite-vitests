@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './GridCard.css'
 
 // Components
@@ -11,10 +10,10 @@ import { getAccountTypeBySymbol } from '../../helpers'
 import { useAccounts, useSelected } from '../../hooks'
 
 export function GridCard() {
-  const { pages } = useAccounts()
+  const { pages, index, setIndex, loading } = useAccounts()
   const { setSelected } = useSelected()
 
-  const [index, setIndex] = useState(0)
+  if (loading) return null
 
   return (
     <div className="GridCard">

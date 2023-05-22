@@ -17,6 +17,8 @@ export function AccountsContextProvider({ children }) {
     pages: [],
   })
 
+  const [index, setIndex] = useState(0)
+
   async function getData(controller) {
     try {
       // Get accounts from the API
@@ -65,7 +67,7 @@ export function AccountsContextProvider({ children }) {
   }, [])
 
   return (
-    <AccountsContext.Provider value={response}>
+    <AccountsContext.Provider value={{ ...response, index, setIndex }}>
       {children}
     </AccountsContext.Provider>
   )
