@@ -1,3 +1,9 @@
+/**
+ * Converts an array of items into an array of pages.
+ *
+ * @param {Object[]} items - The items to be grouped into pages.
+ * @returns {Object[][]} - An array of pages.
+ */
 export function getArrayOfPages(items) {
   let copyItems = [...items]
   let lengthItems = copyItems.length
