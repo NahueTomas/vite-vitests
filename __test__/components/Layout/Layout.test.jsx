@@ -54,7 +54,16 @@ describe('Layout Tests with fake data', () => {
     render(
       <SelectedContext.Provider value={{ selected: null }}>
         <AccountsContext.Provider
-          value={{ pages, accounts, loading: false, error: false }}
+          value={{
+            pages,
+            accounts,
+            loading: false,
+            error: false,
+            index: 0,
+            setIndex: function () {
+              null
+            },
+          }}
         >
           <Layout />
         </AccountsContext.Provider>
