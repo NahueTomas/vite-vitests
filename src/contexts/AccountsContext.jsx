@@ -7,12 +7,7 @@ import { getAccounts } from '../services/api.service'
 // Helpers
 import { getArrayOfPages, filterByRequisites } from '../helpers'
 
-export const AccountsContext = createContext({
-  loading: false,
-  error: false,
-  accounts: [],
-  pages: [],
-})
+export const AccountsContext = createContext()
 
 export function AccountsContextProvider({ children }) {
   const [response, setResponse] = useState({
