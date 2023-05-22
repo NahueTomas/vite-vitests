@@ -41,11 +41,11 @@ export function AccountsContextProvider({ children }) {
         pages,
       })
     } catch (err) {
-      console.log(err)
       setResponse({
         loading: false,
         error: true,
         accounts: [],
+        pages: [],
       })
     }
   }
