@@ -1,3 +1,4 @@
+/** Returns all the account types */
 export function getAccountTypes() {
   return {
     ['Cuenta Corriente']: 'CC',
