@@ -1,6 +1,5 @@
-export const data = {
+export const endpoint = {
   cuentas: [
-    // PAGE 1
     {
       e: '1',
       n: '872378326701',
@@ -41,7 +40,6 @@ export const data = {
       moneda: '$',
       tipo_letras: 'CC',
     },
-    // PAGE 2
     {
       e: '1',
       n: '872378326706',
@@ -74,7 +72,6 @@ export const data = {
       moneda: '$',
       tipo_letras: 'CC',
     },
-    // PAGE 3
     {
       e: '1',
       n: '872378326710',
@@ -107,23 +104,11 @@ export const data = {
       moneda: 'u$s',
       tipo_letras: 'CA',
     },
-    // PAGE 4
-    {
-      e: '1',
-      n: '872378327825',
-      t: '12',
-      saldo: '55',
-      moneda: 'u$s',
-      tipo_letras: 'CA',
-    },
-    {
-      e: '1',
-      n: '872378327826',
-      t: '12',
-      saldo: '550',
-      moneda: 'u$s',
-      tipo_letras: 'CA',
-    },
-    // END
+  ],
+  cuestas: [
+    { id: 1, nombre: 'Drama' },
+    { id: 2, nombre: 'Comedia' },
+    { id: 3, nombre: 'Documental' },
+    { id: 4, nombre: 'Acción' },
   ],
 }
