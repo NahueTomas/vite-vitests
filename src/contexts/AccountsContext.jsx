@@ -64,6 +64,7 @@ export function AccountsContextProvider({ children }) {
         loading: false,
         error: false,
         accounts: [],
+        pages: [],
       })
     }
   }, [])
