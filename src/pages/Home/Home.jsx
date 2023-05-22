@@ -25,9 +25,7 @@ export function Home() {
         {error && <GridCardError />}
         {loading && <GridCardSkeleton />}
 
-        {accounts.length && !loading && !error ? (
-          <GridCard accounts={accounts} />
-        ) : null}
+        {accounts.length && !loading && !error ? <GridCard /> : null}
       </section>
     </main>
   )
