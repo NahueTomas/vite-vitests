@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './GridCard.css'
 
@@ -40,18 +39,4 @@ export function GridCard() {
       )}
     </div>
   )
-}
-
-GridCard.propTypes = {
-  /** Accounts to render in the grid */
-  accounts: PropTypes.arrayOf(
-    PropTypes.shape({
-      e: PropTypes.string.isRequired,
-      n: PropTypes.string.isRequired,
-      t: PropTypes.string.isRequired,
-      saldo: PropTypes.string.isRequired,
-      moneda: PropTypes.string.isRequired,
-      tipo_letras: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
 }
