@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 
 import { AccountDetails } from '../../../src/pages/AccountDetails'
 
-describe('Header test', () => {
+describe('Account test', () => {
   const data = {
     e: '1',
     n: '872378326710',
