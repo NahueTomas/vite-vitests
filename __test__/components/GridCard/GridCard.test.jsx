@@ -93,4 +93,38 @@ describe('GridCard Tests', () => {
     const nextButton = screen.queryAllByText(/Más opciones >>/i)
     expect(nextButton.length).toBe(0)
   })
+
+  it('Should go to the last page and back to the first one', () => {
+    const handleClick = vi.fn()
+
+    render(
+      <SelectedContext.Provider value={{ setSelected: handleClick }}>
+        <AccountsContext.Provider value={{ pages }}>
+          <GridCard />
+        </AccountsContext.Provider>
+      </SelectedContext.Provider>
+    )
+
+    // Going to the last page
+    fireEvent.click(screen.getByText(/Más opciones >>/i))
+    fireEvent.click(screen.getByText(/Más opciones >>/i))
+
+    // Going to the first page
+    fireEvent.click(screen.getByText(/<< Opciones anteriores/i))
+    fireEvent.click(screen.getByText(/<< Opciones anteriores/i))
+
+    // Checking that is the fist page
+
+    // Checking the items
+    const cards = screen.queryAllByText(/Nro:/i)
+    expect(cards.length).toBe(5)
+
+    // Checking next button
+    const nextButton = screen.queryAllByText(/Más opciones >>/i)
+    expect(nextButton.length).toBe(1)
+
+    // Checking the back button
+    const backButton = screen.queryAllByText(/<< Opciones anteriores/i)
+    expect(backButton.length).toBe(0)
+  })
 })
