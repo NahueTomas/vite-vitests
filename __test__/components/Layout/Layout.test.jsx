@@ -71,7 +71,7 @@ describe('Layout Tests with fake data', () => {
     )
 
     // Should show the Header
-    expect(screen.getByText('NCR')).toBeDefined()
+    expect(screen.getByText('Hello')).toBeDefined()
 
     // Should show the Home
     expect(screen.getByText('Selecciona la cuenta a consultar')).toBeDefined()
@@ -108,7 +108,7 @@ describe('Layout Tests with fake data', () => {
     )
 
     // Should show the Header
-    expect(screen.getByText('NCR')).toBeDefined()
+    expect(screen.getByText('Hello')).toBeDefined()
 
     // Should show the Home
     expect(screen.getByText('Este es tu saldo actual')).toBeDefined()
@@ -129,7 +129,7 @@ describe('Layout Test with data from MSW', () => {
     )
 
     // Should show the Header
-    expect(screen.getByText('NCR')).toBeDefined()
+    expect(screen.getByText('Hello')).toBeDefined()
 
     // Should show the Home
     expect(screen.getByText('Selecciona la cuenta a consultar')).toBeDefined()
